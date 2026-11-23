@@ -19,7 +19,7 @@ python -m pip install -r requirements.txt
 
 ### Run
 
-Open `as3.ipynb` in Jupyter or VS Code with the repository root as the working directory. Run the cells in order. If `denoising_diffusion_checkpoint.pt` exists in the working directory, the notebook restores its model, optimizer, and loss history. Otherwise, training starts at epoch 1. Set `EPOCHS` to the desired total when continuing training.
+Open `as3.ipynb` in Jupyter or VS Code with the repository root as the working directory, then run the cells in order. To resume training, keep `denoising_diffusion_checkpoint.pt` in the working directory and set EPOCHS to the desired total.
 
 The notebook saves the loss curve, 16 individual samples, and an overview grid to `outputs/`. Set `RUN_FULL_EVAL = False` to skip FID and Inception Score. The first evaluation may need internet access to download pretrained Inception weights.
 
@@ -67,8 +67,3 @@ The completed 50-epoch experiment used PyTorch-Ignite to score 1,036 generated i
 | Epoch | FID | Inception Score |
 |---:|---:|---:|
 | 50 | 0.0875 | 1.4496 |
-
-## References
-
-- [Denoising Diffusion Probabilistic Models](https://arxiv.org/abs/2006.11239)
-- [PyTorch-Ignite evaluation with FID and Inception Score](https://pytorch-ignite.ai/blog/gan-evaluation-with-fid-and-is/)
