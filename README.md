@@ -52,13 +52,11 @@ During training, each image is corrupted with Gaussian noise at a randomly sampl
 
 The training v-prediction MSE fell from 0.26957 at epoch 1 to 0.09977 at epoch 50.
 
-![Training v-prediction loss over 50 epochs](examples/training_loss.png)
 
 ### Generated images
 
 The grid shows held-out images on the left and 16 images generated from the final checkpoint on the right. The samples reproduce some of the pink-purple coloration and local texture. Cell nuclei and tissue boundaries remain less distinct than in the held-out images.
 
-![Held-out and generated histopathology patches](examples/overview.png)
 
 ### Evaluation
 
